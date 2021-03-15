@@ -1,4 +1,10 @@
 import abstractfactory.*;
+import adaptor.Adaptee;
+import adaptor.Adapter;
+import adaptor.Target;
+import builder.ManBuilder;
+import builder.Person;
+import builder.PersonDirector;
 import chain1.handler.HRRequestHandler;
 import chain1.handler.PMRequestHandler;
 import chain1.handler.RequestHandler;
@@ -8,6 +14,8 @@ import chain1.request.DimissionRequest;
 import chain1.request.Request;
 import facade.*;
 import org.junit.Test;
+import prototype.ConcretePrototype;
+import prototype.Prototype;
 import strategy.Context;
 import strategy.StrategyImplA;
 import strategy.StrategyImplB;
@@ -87,5 +95,29 @@ public class DemoTest {
     ctx.doMethod();
     ctx = new Context(new StrategyImplC());
     ctx.doMethod();
+  }
+
+  @Test
+  public void testAdaptor() {
+    Target target = new Adapter(new Adaptee());
+    target.adapteeMethod();
+    target.adapterMethod();
+  }
+
+  @Test
+  public void testBuilder() {
+    PersonDirector pd = new PersonDirector();
+    Person person = pd.constructPerson(new ManBuilder());
+    System.out.println(person.getBody());
+    System.out.println(person.getFoot());
+    System.out.println(person.getHead());
+  }
+
+  @Test
+  public void testPrototype() {
+    Prototype pro = new ConcretePrototype("prototype");
+    Prototype pro2 = (Prototype) pro.clone();
+    System.out.println(pro.getName());
+    System.out.println(pro2.getName());
   }
 }
