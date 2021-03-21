@@ -2,12 +2,12 @@ package adaptor.charge;
 
 public class Phone {
 
-  // ³äµç
+  // å……ç”µ
   public void charging(IVoltage5V iVoltage5V) {
     if (iVoltage5V.output5V() == 5) {
-      System.out.println("µçÑ¹Îª5V, ¿ÉÒÔ³äµç~~");
+      System.out.println("ç”µå‹ä¸º5V, å¯ä»¥å……ç”µ~~");
     } else if (iVoltage5V.output5V() > 5) {
-      System.out.println("µçÑ¹´óÓÚ5V, ²»ÄÜ³äµç~~");
+      System.out.println("ç”µå‹å¤§äº5V, ä¸èƒ½å……ç”µ~~");
     }
   }
 }

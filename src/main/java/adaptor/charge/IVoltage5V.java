@@ -1,6 +1,6 @@
 package adaptor.charge;
 
-// ÊÊÅä½Ó¿Ú
+// é€‚é…æ¥å£
 public interface IVoltage5V {
   public int output5V();
 }

@@ -1,7 +1,7 @@
 package template.milk;
 
 /**
- * ´¿Å£ÄÌµÄÖÆ×÷
+ * çº¯ç‰›å¥¶çš„åˆ¶ä½œ
  *
  * @author dingyawu
  * @version 1.0

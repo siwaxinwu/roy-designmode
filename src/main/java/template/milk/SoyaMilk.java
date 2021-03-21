@@ -1,14 +1,14 @@
 package template.milk;
 
 /**
- * ³éÏóÀà£¬±íÊ¾¶¹½¬
+ * æŠ½è±¡ç±»ï¼Œè¡¨ç¤ºè±†æµ†
  *
  * @author dingyawu
  * @version 1.0
  * @date created in 19:03 2021-03-17
  */
 public abstract class SoyaMilk {
-  /** Ä£°å·½·¨£¬±íÊ¾¶¹½¬µÄÖÆ×÷·½·¨£¬Ä£°å·½·¨¿ÉÒÔ×ö³Éfinal£¬²»ÈÃ×ÓÀàÈ¥¸²¸Ç */
+  /** æ¨¡æ¿æ–¹æ³•ï¼Œè¡¨ç¤ºè±†æµ†çš„åˆ¶ä½œæ–¹æ³•ï¼Œæ¨¡æ¿æ–¹æ³•å¯ä»¥åšæˆfinalï¼Œä¸è®©å­ç±»å»è¦†ç›– */
   final void make() {
     select();
     if (customerWantCondiments()) {
@@ -18,26 +18,26 @@ public abstract class SoyaMilk {
     beat();
   }
 
-  /** ´òËé */
+  /** æ‰“ç¢ */
   public void beat() {
     System.out.println(" fouth: beat.....");
   };
 
-  /** ½şÅİ */
+  /** æµ¸æ³¡ */
   public void soak() {
     System.out.println("third: soak.....");
   };
 
-  /** Ìí¼Óµ÷Î¶Æ· */
+  /** æ·»åŠ è°ƒå‘³å“ */
   public abstract void addCondiments();
 
-  /** Ñ¡ÁÏ */
+  /** é€‰æ–™ */
   public void select() {
     System.out.println("first: select best dou ");
   };
 
   /**
-   * ¿Í»§ÊÇ·ñĞèÒªÅäÁÏ ¹³×Ó·½·¨£¬¾ö¶¨ÊÇ·ñĞèÒªÌí¼ÓÅäÁÏ Ä£°å·½·¨ÀïÃæÌí¼Ó¹³×Ó·½·¨
+   * å®¢æˆ·æ˜¯å¦éœ€è¦é…æ–™ é’©å­æ–¹æ³•ï¼Œå†³å®šæ˜¯å¦éœ€è¦æ·»åŠ é…æ–™ æ¨¡æ¿æ–¹æ³•é‡Œé¢æ·»åŠ é’©å­æ–¹æ³•
    *
    * @return boolean
    */

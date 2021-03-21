@@ -1,7 +1,7 @@
 package adaptor.charge;
 
 /**
- * ±»ÊÊÅäµÄÀà
+ * è¢«é€‚é…çš„ç±»
  *
  * @author siwaxinwu5
  * @date 2021/03/17
@@ -10,7 +10,7 @@ public class Voltage220V {
 
   public int output220V() {
     int src = 220;
-    System.out.println("µçÑ¹=" + src + "·ü");
+    System.out.println("ç”µå‹=" + src + "ä¼");
     return src;
   }
 }

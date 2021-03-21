@@ -1,7 +1,7 @@
 package template.milk;
 
 /**
- * ºì¶¹¶¹½¬µÄÖÆ×÷¹ı³Ì
+ * çº¢è±†è±†æµ†çš„åˆ¶ä½œè¿‡ç¨‹
  *
  * @author dingyawu
  * @version 1.0
@@ -13,7 +13,7 @@ public class RedBeanSoyaMilk extends SoyaMilk {
     System.out.println("add best redbean");
   }
 
-  /** Ò²¿ÉÒÔÖØĞ´Ò»Ğ©·½·¨£¬²»Ò»¶¨ÊÇ³éÏó·½·¨ */
+  /** ä¹Ÿå¯ä»¥é‡å†™ä¸€äº›æ–¹æ³•ï¼Œä¸ä¸€å®šæ˜¯æŠ½è±¡æ–¹æ³• */
   @Override
   public void select() {
     System.out.println("select different douzi for redbean");

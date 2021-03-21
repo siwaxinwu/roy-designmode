@@ -1,7 +1,7 @@
 package builder.builderhousedemo;
 
 /**
- * ·¿Îİ½¨ÔìÉÌ ³éÏóµÄ½¨ÔìÕß
+ * æˆ¿å±‹å»ºé€ å•† æŠ½è±¡çš„å»ºé€ è€…
  *
  * @author siwaxinwu5
  * @date 2021/03/15
@@ -17,7 +17,7 @@ public abstract class HouseBuilder {
   public abstract void roofed();
 
   /**
-   * ½¨Ôì·¿×ÓºÃ£¬ ½«²úÆ·(·¿×Ó) ·µ»Ø
+   * å»ºé€ æˆ¿å­å¥½ï¼Œ å°†äº§å“(æˆ¿å­) è¿”å›
    *
    * @return {@link House}
    */
