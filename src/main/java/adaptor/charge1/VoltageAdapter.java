@@ -1,7 +1,7 @@
 package adaptor.charge1;
 
 /**
- * 适配器类 ,类适配器由继承被适配者转变成通过构造器注入
+ * 适配器类 ,类适配器由继承被适配者转变成通过构造器注入 ,持有src, 实现dest
  *
  * @author siwaxinwu5
  * @date 2021/03/16

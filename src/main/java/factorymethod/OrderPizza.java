@@ -1,4 +1,4 @@
-package simplefactory;
+package factorymethod;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,34 +9,22 @@ import java.io.InputStreamReader;
  * @version 1.0
  * @date created in 19:40 2021-03-21
  */
-public class OrderPizza {
-  SimpleFactory factory;
-  Pizza pizza;
+public abstract class OrderPizza {
 
-  public OrderPizza(SimpleFactory factory) {
-    setFactory(factory);
-  }
-
-  public void setFactory(SimpleFactory factory) {
+  public OrderPizza() {
     String orderType = "";
-    this.factory = factory;
     do {
       orderType = gettype();
-      pizza = this.factory.createPizza(orderType);
-      if (pizza != null) {
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
-      } else {
-        System.out.println("order fail");
-        break;
-      }
-
+      // 抽象方法，由工厂子类来完成
+      Pizza pizza = createPizza(orderType);
+      pizza.prepare();
+      pizza.bake();
+      pizza.cut();
+      pizza.box();
     } while (true);
   }
 
-  public OrderPizza() {}
+  public abstract Pizza createPizza(String orderType);
 
   private String gettype() {
     try {

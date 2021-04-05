@@ -1,4 +1,6 @@
-package simplefactory;
+package abstractfactory.pizzaabstractfactory.order;
+
+import abstractfactory.pizzaabstractfactory.pizza.Pizza;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,19 +12,20 @@ import java.io.InputStreamReader;
  * @date created in 19:40 2021-03-21
  */
 public class OrderPizza {
-  SimpleFactory factory;
-  Pizza pizza;
+  AbsFactory absFactory;
 
-  public OrderPizza(SimpleFactory factory) {
-    setFactory(factory);
+  public OrderPizza(AbsFactory absFactory) {
+    setFactory(absFactory);
   }
 
-  public void setFactory(SimpleFactory factory) {
+  private void setFactory(AbsFactory absFactory) {
+    Pizza pizza = null;
     String orderType = "";
-    this.factory = factory;
+    this.absFactory = absFactory;
     do {
       orderType = gettype();
-      pizza = this.factory.createPizza(orderType);
+      // 抽象方法，由工厂子类来完成
+      pizza = absFactory.createPizza(orderType);
       if (pizza != null) {
         pizza.prepare();
         pizza.bake();
@@ -30,13 +33,9 @@ public class OrderPizza {
         pizza.box();
       } else {
         System.out.println("order fail");
-        break;
       }
-
     } while (true);
   }
-
-  public OrderPizza() {}
 
   private String gettype() {
     try {

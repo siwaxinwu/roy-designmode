@@ -5,24 +5,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
+ * 演示静态工厂，等同于简单工厂模式
+ *
  * @author dingyawu
  * @version 1.0
  * @date created in 19:40 2021-03-21
  */
-public class OrderPizza {
-  SimpleFactory factory;
+public class OrderPizza1 {
+
   Pizza pizza;
 
-  public OrderPizza(SimpleFactory factory) {
-    setFactory(factory);
-  }
-
-  public void setFactory(SimpleFactory factory) {
+  public OrderPizza1() {
     String orderType = "";
-    this.factory = factory;
     do {
       orderType = gettype();
-      pizza = this.factory.createPizza(orderType);
+      pizza = SimpleFactory.createPizza1(orderType);
       if (pizza != null) {
         pizza.prepare();
         pizza.bake();
@@ -35,8 +32,6 @@ public class OrderPizza {
 
     } while (true);
   }
-
-  public OrderPizza() {}
 
   private String gettype() {
     try {
